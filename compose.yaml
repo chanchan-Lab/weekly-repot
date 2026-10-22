@@ -1,0 +1,23 @@
+services:
+  bot:
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    init: true
+    stop_grace_period: 60s
+    volumes:
+      - bot-data:/app/data
+      - ./templates:/app/templates:ro
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
+volumes:
+  bot-data:

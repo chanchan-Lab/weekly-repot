@@ -1,0 +1,8 @@
+/submit@YOUR_BOT_USERNAME 2026-10-19
+[금주 업무]
+- 도로공사 Studio 환경변수 설정
+- LLM API 연결 확인 진행 중
+[차주 계획]
+- Studio 기능 테스트
+[이슈]
+- 외부 도메인 등록 대기
